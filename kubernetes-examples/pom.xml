@@ -23,17 +23,14 @@
     <artifactId>kubernetes-client-project</artifactId>
     <version>6.12.0</version>
   </parent>
-
   <artifactId>kubernetes-examples</artifactId>
   <packaging>jar</packaging>
   <name>Fabric8 :: Kubernetes :: Client Examples</name>
-
   <properties>
     <podName>mypod</podName>
     <masterUrl>https://localhost:8443/</masterUrl>
     <namespace>default</namespace>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>io.fabric8</groupId>
@@ -45,39 +42,32 @@
       <artifactId>openshift-client</artifactId>
       <scope>runtime</scope>
     </dependency>
-
     <dependency>
       <groupId>com.squareup.okhttp3</groupId>
       <artifactId>okhttp</artifactId>
     </dependency>
-
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
       <version>${slf4j.version}</version>
       <scope>runtime</scope>
     </dependency>
-
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-compress</artifactId>
       <version>${commons-compress.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <scope>compile</scope>
     </dependency>
-
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <scope>compile</scope>
     </dependency>
-
   </dependencies>
-
   <build>
     <plugins>
       <plugin>
@@ -91,9 +81,39 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>io.fabric8.kubernetes.examples.ListExamples</mainClass>
+              <classpathPrefix>liba1/</classpathPrefix>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.10</version>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/liba1</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
-
   <profiles>
     <!-- lets make it easy to run the example programs via a mvn profile -->
     <profile>
@@ -245,5 +265,4 @@
       </dependencies>
     </profile>
   </profiles>
-
 </project>

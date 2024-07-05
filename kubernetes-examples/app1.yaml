@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: java-k8sapi
+  name: java-k8sapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-k8sapi
+  template:
+    metadata:
+      labels:
+        app: java-k8sapi
+    spec:
+      serviceAccountName: my-sa
+      containers:
+      - name: java-k8sapi
+        image: for-java-k8sapi:0.1
+        imagePullPolicy: IfNotPresent
+        command: ["sh","-c",'java -jar app.jar;while true; do sleep 20; done']
+    # command: ["sleep 99998;"]
+  # terminationGracePeriodSeconds: 400 # 优雅退出时间,默认为30秒

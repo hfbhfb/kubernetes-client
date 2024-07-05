@@ -1,0 +1,23 @@
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     9594    8774    9594       3616  cons3     197609 20:27:13 /d/work1/Gopath/bin/gowatch
+     8582    8239    8582      72160  cons0     197609 19:06:33 /usr/bin/ssh
+     8239       1    8239       5020  cons0     197609 18:09:43 /usr/bin/bash
+     8774       1    8774      63536  cons3     197609 19:35:57 /usr/bin/bash
+     9663       1    9645      75532  cons15    197609 20:44:51 /d/work2/Java/jdk-18.0.2.1/bin/java
+     6776       1    6776      27440  cons13    197609   Jun 29 /usr/bin/bash
+     9524       1    9524      18580  cons14    197609 20:25:19 /usr/bin/bash
+     6716       1    6716      29652  cons8     197609   Jun 29 /usr/bin/bash
+     7216       1    7216      15032  cons6     197609   Jul  2 /usr/bin/bash
+     7192       1    7192      53316  cons12    197609   Jul  2 /usr/bin/bash
+     7278       1    7278       7100  cons11    197609   Jul  2 /usr/bin/bash
+      679       1     679       7272  cons5     197609   Jun 28 /usr/bin/bash
+     6867       1    6867      34120  cons4     197609   Jun 29 /usr/bin/bash
+     9680       1    9594      35356  cons3     197609 20:44:53 /usr/bin/bash
+     8583       1    8583      18428  cons9     197609 19:08:35 /usr/bin/bash
+     7245       1    7245      56708  cons7     197609   Jul  2 /usr/bin/bash
+     9645    9634    9645      57680  cons15    197609 20:44:48 /usr/bin/make
+     9634       1    9634      64580  cons15    197609 20:29:47 /usr/bin/bash
+     7199       1    7199      64604  cons2     197609   Jul  2 /usr/bin/bash
+     6985       1    6985      18908  cons1     197609   Jul  1 /usr/bin/bash
+     9682    9680    9594      61056  cons3     197609 20:44:53 /usr/bin/ps
+     9442       1    9442      72520  cons10    197609 20:07:26 /usr/bin/bash

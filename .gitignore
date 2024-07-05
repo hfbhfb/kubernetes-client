@@ -90,3 +90,7 @@ extensions/*/generator/generate
 
 # MacOS
 .DS_Store
+
+*.exe
+*.exe~
+tmp
