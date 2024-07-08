@@ -30,6 +30,8 @@ make onlyimg
 docker run -it for-java-k8sapi:0.1 sh -c "ls"
 docker run -it for-java-k8sapi:0.1 sh -c "java -jar app.jar"
 
+# sa准备
+kubectl apply -f app1-sa.yaml
 
 # 
 kubectl delete -f app1.yaml
