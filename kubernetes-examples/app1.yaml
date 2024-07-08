@@ -17,7 +17,7 @@ spec:
       serviceAccountName: my-sa
       containers:
       - name: java-k8sapi
-        image: for-java-k8sapi:0.1
+        image: for-java-k8sapi:0.1 # swr.cn-north-4.myhuaweicloud.com/hfbbg4/for-java-k8sapi:0.1
         imagePullPolicy: IfNotPresent
         command: ["sh","-c",'java -jar app.jar;while true; do sleep 20; done']
     # command: ["sleep 99998;"]

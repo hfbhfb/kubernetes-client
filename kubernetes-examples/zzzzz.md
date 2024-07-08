@@ -39,6 +39,10 @@ kubectl get po -oyaml > tmp/1.yaml
 
 kubectl get po |grep Running|awk '{print $1}'|xargs -I {} kubectl logs {}
 
+docker tag for-java-k8sapi:0.1 swr.cn-north-4.myhuaweicloud.com/hfbbg4/for-java-k8sapi:0.1
+
+docker push swr.cn-north-4.myhuaweicloud.com/hfbbg4/for-java-k8sapi:0.1
+
 
 ```
 
